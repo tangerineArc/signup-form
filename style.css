@@ -1,7 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+:root {
+    --brand-text-color: #ffffff;
+    --page-text-color: #adb5bd;
+    
+    --accent-color: #06d6a0;
+
+    --input-border-color: #8b8c88;
+
+    --bg-credits-background-color: #2b2c2860;
+    --form-background-color: #131515;
+    --main-background-color: #040404;
+
+    --brand-font-family: "Pacifico", cursive;
+    --page-font-family: "Quicksand", sans-serif;
+}
+
 *,
 *::before,
 *::after {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+}
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    height: 100vh;
+
+    color: var(--page-text-color);
+}
+
+aside {
+    background-image: url("./images/sidebar-image.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    position: relative;
+
+    flex-grow: 1;
+    flex-basis: 300px;
+}
+
+.branding {
+    background-color: var(--bg-credits-background-color);
+
+    position: absolute;
+    top: 4rem;
+
+    width: 100%;
+    padding: 1.5rem 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.branding p {
+    font-size: 3rem;
+    font-family: var(--brand-font-family);
+    color: var(--brand-text-color);
+}
+
+.branding svg {
+    stroke: var(--accent-color);
+    stroke-width: 2;
+    width: 3.5rem;
+    height: 3.5rem;
+}
+
+aside > p {
+    background-color: var(--bg-credits-background-color);
+
+    font-family: var(--page-font-family);
+
+    position: absolute;
+    bottom: 1rem;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+
+    padding: 0.5em 1em;
+    border-radius: 10px;
+    width: fit-content;
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2em;
+
+    flex-shrink: 0;
+    flex-grow: 2;
+
+    background-color: var(--main-background-color);
+
+    padding: 2rem 3rem;
+
+    font-family: var(--page-font-family);
+    font-size: 1.2rem;
+    line-height: 1.5;
+    font-weight: bold;
+}
+
+main > section:first-child {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+
+    max-width: 60ch;
+}
+
+main > section:nth-child(2) {
+    border-radius: 10px;
+    width: 80%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1em;
+}
+
+form section {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 4em;
+    row-gap: 0.5em;
+}
+
+form section div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    flex-grow: 1;
+}
+
+label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+input {
+    appearance: none;
+    border: none;
+    outline: none;
+
+    background-color: var(--bg-credits-background-color);
+    border-bottom: 3px solid var(--input-border-color);
+    border-radius: 5px;
+
+    padding: 0.5em;
+
+    font-size: inherit;
+    font-family: inherit;
+    color: inherit;
+}
+
+input:focus {
+    border-bottom: 3px solid var(--accent-color);
+}
+
+form button {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    color: var(--accent-color);
+
+    background-color: var(--bg-credits-background-color);
+
+    margin-top: 1rem;
+    padding: 0.8em 2em;
+    border: none;
+    border-radius: 10px;
+
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: var(--accent-color);
+    color: var(--form-background-color);
 }

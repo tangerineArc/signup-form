@@ -11,13 +11,17 @@
 
 <body>
     <aside>
-        <img src="./images/sidebar-image.jpg" alt="decorative image" width="200">
-        <div>
-            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-citrus"><path d="M21.66 17.67a1.08 1.08 0 0 1-.04 1.6A12 12 0 0 1 4.73 2.38a1.1 1.1 0 0 1 1.61-.04z"/><path d="M19.65 15.66A8 8 0 0 1 8.35 4.34"/><path d="m14 10-5.5 5.5"/><path d="M14 17.85V10H6.15"/></svg>
+        <div class="branding">
             <p>tangerine</p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21.66 17.67a1.08 1.08 0 0 1-.04 1.6A12 12 0 0 1 4.73 2.38a1.1 1.1 0 0 1 1.61-.04z"/>
+                <path d="M19.65 15.66A8 8 0 0 1 8.35 4.34"/>
+                <path d="m14 10-5.5 5.5"/>
+                <path d="M14 17.85V10H6.15"/>
+            </svg>
         </div>
         <p>
-            Photo by <a href="https://unsplash.com/@iamthedave?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Dave Hoefler</a> on <a href="https://unsplash.com/photos/silhouette-of-trees-near-body-of-water-during-sunset-lsoogGC_5dg?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+            Photo by <a href="https://unsplash.com/@danesduet?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" target="_blank" rel="noreferrer noopener">Daniel Olah</a> on <a href="https://unsplash.com/photos/white-lines-on-track-field-2cHW5TKr9Vs?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" rel="noreferrer noopener">Unsplash</a>
         </p>
     </aside>
     <main>
@@ -25,10 +29,10 @@
             <p>
                 This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams.
                 <br>
-                Sign up now to get started.
+                Sign up <em>now</em> to get started.
             </p>
             <p>
-                You know you want to.
+                You <em>know</em> you want to.
             </p>
         </section>
         <section>
@@ -37,12 +41,14 @@
                 <section>
                     <div>
                         <label for="first-name">First Name</label>
-                        <input type="text" name="first_name" id="first-name">
+                        <input type="text" name="first_name" id="first-name" autofocus>
                     </div>
                     <div>
                         <label for="last-name">Last Name</label>
                         <input type="text" name="last_name" id="last-name">
                     </div>
+                </section>
+                <section>
                     <div>
                         <label for="mail">Email</label>
                         <input type="email" name="mail_id" id="mail">
@@ -51,6 +57,8 @@
                         <label for="phone-number">Phone Number</label>
                         <input type="tel" name="phone_number" id="phone-number">
                     </div>
+                </section>
+                <section>
                     <div>
                         <label for="password">Password</label>
                         <input type="password" name="password" id="password">
