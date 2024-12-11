@@ -6,6 +6,7 @@
     --page-text-color: #adb5bd;
     
     --accent-color: #06d6a0;
+    --error-color: #f72585;
 
     --input-border-color: #8b8c88;
 
@@ -188,8 +189,24 @@ input {
     color: inherit;
 }
 
-input:focus {
+input:valid:not(:placeholder-shown),
+input:valid:focus {
     border-bottom: 3px solid var(--accent-color);
+}
+
+input:invalid:not(:placeholder-shown),
+input:invalid:focus {
+    border-bottom: 3px solid var(--error-color);
+}
+
+.password-instruction,
+.confirm-password-instruction {
+    font-size: 0.8rem;
+    color: var(--error-color);
+    
+    width: 40ch;
+    margin-left: 0.5rem;
+    display: none;
 }
 
 form button {
